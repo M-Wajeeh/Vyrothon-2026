@@ -1,0 +1,44 @@
+[
+  {
+    "tool": "weather",
+    "description": "Get current weather for a location",
+    "parameters": {
+      "location": {"type": "string", "required": true, "description": "City or place name"},
+      "unit": {"type": "string", "required": true, "enum": ["C", "F"], "description": "Temperature unit"}
+    }
+  },
+  {
+    "tool": "calendar",
+    "description": "List or create calendar events",
+    "parameters": {
+      "action": {"type": "string", "required": true, "enum": ["list", "create"], "description": "Action to perform"},
+      "date": {"type": "string", "required": true, "format": "YYYY-MM-DD", "description": "Event date"},
+      "title": {"type": "string", "required": false, "description": "Event title (required for create)"}
+    }
+  },
+  {
+    "tool": "convert",
+    "description": "Convert between measurement units",
+    "parameters": {
+      "value": {"type": "number", "required": true, "description": "Numeric value to convert"},
+      "from_unit": {"type": "string", "required": true, "description": "Source unit"},
+      "to_unit": {"type": "string", "required": true, "description": "Target unit"}
+    }
+  },
+  {
+    "tool": "currency",
+    "description": "Convert between currencies",
+    "parameters": {
+      "amount": {"type": "number", "required": true, "description": "Amount to convert"},
+      "from": {"type": "string", "required": true, "format": "ISO4217", "description": "Source currency code"},
+      "to": {"type": "string", "required": true, "format": "ISO4217", "description": "Target currency code"}
+    }
+  },
+  {
+    "tool": "sql",
+    "description": "Execute a SQL query",
+    "parameters": {
+      "query": {"type": "string", "required": true, "description": "SQL query string"}
+    }
+  }
+]

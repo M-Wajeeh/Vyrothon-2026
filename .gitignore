@@ -1,0 +1,7 @@
+
+
+# Vyrothon Specific Ignore Rules
+venv/
+models/merged/
+models/*.gguf
+!models/llama-1b-tool-calling/

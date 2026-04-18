@@ -1,0 +1,40 @@
+{"id":1,"messages":[{"role":"user","content":"What is the temperature in London right now?"}],"expected":{"tool":"weather","args":{"location":"London","unit":"C"}}}
+{"id":2,"messages":[{"role":"user","content":"Weather in Chicago in Fahrenheit please."}],"expected":{"tool":"weather","args":{"location":"Chicago","unit":"F"}}}
+{"id":3,"messages":[{"role":"user","content":"Tell me the weather for Mumbai."}],"expected":{"tool":"weather","args":{"location":"Mumbai","unit":"C"}}}
+{"id":4,"messages":[{"role":"user","content":"How's the climate in Berlin today?"}],"expected":{"tool":"weather","args":{"location":"Berlin","unit":"C"}}}
+{"id":5,"messages":[{"role":"user","content":"Schedule a team standup for 2026-04-21."}],"expected":{"tool":"calendar","args":{"action":"create","date":"2026-04-21","title":"Team Standup"}}}
+{"id":6,"messages":[{"role":"user","content":"Add a birthday party event on 2026-06-10."}],"expected":{"tool":"calendar","args":{"action":"create","date":"2026-06-10","title":"Birthday Party"}}}
+{"id":7,"messages":[{"role":"user","content":"Show my schedule for 2026-04-25."}],"expected":{"tool":"calendar","args":{"action":"list","date":"2026-04-25"}}}
+{"id":8,"messages":[{"role":"user","content":"Do I have anything on 2026-05-01?"}],"expected":{"tool":"calendar","args":{"action":"list","date":"2026-05-01"}}}
+{"id":9,"messages":[{"role":"user","content":"Convert 200 meters to feet."}],"expected":{"tool":"convert","args":{"value":200,"from_unit":"meters","to_unit":"feet"}}}
+{"id":10,"messages":[{"role":"user","content":"How many kilometers is 10 miles?"}],"expected":{"tool":"convert","args":{"value":10,"from_unit":"miles","to_unit":"kilometers"}}}
+{"id":11,"messages":[{"role":"user","content":"What is 32 Fahrenheit in Celsius?"}],"expected":{"tool":"convert","args":{"value":32,"from_unit":"fahrenheit","to_unit":"celsius"}}}
+{"id":12,"messages":[{"role":"user","content":"Convert 500 grams to pounds."}],"expected":{"tool":"convert","args":{"value":500,"from_unit":"grams","to_unit":"pounds"}}}
+{"id":13,"messages":[{"role":"user","content":"How much is 75 EUR in USD?"}],"expected":{"tool":"currency","args":{"amount":75,"from":"EUR","to":"USD"}}}
+{"id":14,"messages":[{"role":"user","content":"Exchange 5000 INR to GBP."}],"expected":{"tool":"currency","args":{"amount":5000,"from":"INR","to":"GBP"}}}
+{"id":15,"messages":[{"role":"user","content":"What's 300 CAD in JPY?"}],"expected":{"tool":"currency","args":{"amount":300,"from":"CAD","to":"JPY"}}}
+{"id":16,"messages":[{"role":"user","content":"Convert 1500 AED to USD."}],"expected":{"tool":"currency","args":{"amount":1500,"from":"AED","to":"USD"}}}
+{"id":17,"messages":[{"role":"user","content":"List all products with price above 100."}],"expected":{"tool":"sql","args":{"query":"SELECT * FROM products WHERE price > 100"}}}
+{"id":18,"messages":[{"role":"user","content":"How many employees are in the engineering department?"}],"expected":{"tool":"sql","args":{"query":"SELECT COUNT(*) FROM employees WHERE department = 'engineering'"}}}
+{"id":19,"messages":[{"role":"user","content":"Show me the average salary by department."}],"expected":{"tool":"sql","args":{"query":"SELECT department, AVG(salary) FROM employees GROUP BY department"}}}
+{"id":20,"messages":[{"role":"user","content":"Find users who signed up in January 2026."}],"expected":{"tool":"sql","args":{"query":"SELECT * FROM users WHERE signup_date >= '2026-01-01' AND signup_date < '2026-02-01'"}}}
+{"id":21,"messages":[{"role":"user","content":"Who are you?"}],"expected":null}
+{"id":22,"messages":[{"role":"user","content":"Tell me a joke."}],"expected":null}
+{"id":23,"messages":[{"role":"user","content":"What is the meaning of life?"}],"expected":null}
+{"id":24,"messages":[{"role":"user","content":"Play my Spotify playlist."}],"expected":null}
+{"id":25,"messages":[{"role":"user","content":"Turn on the air conditioner."}],"expected":null}
+{"id":26,"messages":[{"role":"user","content":"Book a flight to Paris."}],"expected":null}
+{"id":27,"messages":[{"role":"user","content":"Lahore mein aaj mausam kaisa hai?"}],"expected":{"tool":"weather","args":{"location":"Lahore","unit":"C"}}}
+{"id":28,"messages":[{"role":"user","content":"¿Cómo está el clima en Madrid?"}],"expected":{"tool":"weather","args":{"location":"Madrid","unit":"C"}}}
+{"id":29,"messages":[{"role":"user","content":"Chek the wetaher in Sydny"}],"expected":{"tool":"weather","args":{"location":"Sydney","unit":"C"}}}
+{"id":30,"messages":[{"role":"user","content":"Convrrt 50 dollers to euroes"}],"expected":{"tool":"currency","args":{"amount":50,"from":"USD","to":"EUR"}}}
+{"id":31,"messages":[{"role":"user","content":"What is the weather in Rome?"},{"role":"assistant","content":"<tool_call>{\"tool\": \"weather\", \"args\": {\"location\": \"Rome\", \"unit\": \"C\"}}</tool_call>"},{"role":"user","content":"And in Milan?"}],"expected":{"tool":"weather","args":{"location":"Milan","unit":"C"}}}
+{"id":32,"messages":[{"role":"user","content":"Convert 100 USD to EUR."},{"role":"assistant","content":"<tool_call>{\"tool\": \"currency\", \"args\": {\"amount\": 100, \"from\": \"USD\", \"to\": \"EUR\"}}</tool_call>"},{"role":"user","content":"Now convert that to GBP instead."}],"expected":{"tool":"currency","args":{"amount":100,"from":"USD","to":"GBP"}}}
+{"id":33,"messages":[{"role":"user","content":"How many cm in 12 inches?"},{"role":"assistant","content":"<tool_call>{\"tool\": \"convert\", \"args\": {\"value\": 12, \"from_unit\": \"inches\", \"to_unit\": \"cm\"}}</tool_call>"},{"role":"user","content":"What about in millimeters?"}],"expected":{"tool":"convert","args":{"value":12,"from_unit":"inches","to_unit":"millimeters"}}}
+{"id":34,"messages":[{"role":"user","content":"كم يساوي 200 دولار بالريال السعودي؟"}],"expected":{"tool":"currency","args":{"amount":200,"from":"USD","to":"SAR"}}}
+{"id":35,"messages":[{"role":"user","content":"Convert 2.5 liters to gallons."}],"expected":{"tool":"convert","args":{"value":2.5,"from_unit":"liters","to_unit":"gallons"}}}
+{"id":36,"messages":[{"role":"user","content":"What events do I have next Monday, 2026-04-20?"}],"expected":{"tool":"calendar","args":{"action":"list","date":"2026-04-20"}}}
+{"id":37,"messages":[{"role":"user","content":"Delete all inactive users from the database."}],"expected":{"tool":"sql","args":{"query":"DELETE FROM users WHERE status = 'inactive'"}}}
+{"id":38,"messages":[{"role":"user","content":"Navigate me to the nearest coffee shop."}],"expected":null}
+{"id":39,"messages":[{"role":"user","content":"mujhe 1000 rupay dollar mein convert karo"}],"expected":{"tool":"currency","args":{"amount":1000,"from":"INR","to":"USD"}}}
+{"id":40,"messages":[{"role":"user","content":"What is 0 kelvin in celsius?"}],"expected":{"tool":"convert","args":{"value":0,"from_unit":"kelvin","to_unit":"celsius"}}}

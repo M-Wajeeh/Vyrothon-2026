@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Vyrothon — On-Device Tool-Calling Assistant
+# Single requirements file covering both inference (local) and training (Colab)
+#
+# LOCAL / INFERENCE  (install these before running app.py or inference.py)
+#   pip install -r requirements.txt
+#
+# TRAINING  (Colab T4 — all sections below)
+#   pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Demo / Inference ─────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# llama-cpp-python: primary inference backend (GGUF, fast CPU)
+# Standard install (needs a C++ compiler):
+#   pip install llama-cpp-python
+# Windows / no compiler — use prebuilt CPU wheel:
+#   pip install llama-cpp-python \
+#     --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu/
+# Colab (no GPU offload needed):
+#   pip install llama-cpp-python
+llama-cpp-python
+
+# ── Training (Google Colab T4) ───────────────────────────────────────────────
+torch==2.3.1
+transformers==4.46.0
+datasets==2.20.0
+accelerate==0.33.0
+peft==0.12.0
+trl==0.9.6
+bitsandbytes==0.43.3
+sentencepiece==0.2.0
+protobuf==4.25.3
