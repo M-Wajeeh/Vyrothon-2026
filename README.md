@@ -1,5 +1,6 @@
-# On-Device Tool-Calling Assistant
 
+# On-Device Tool-Calling Assistant
+![Streamlit Frontend preview](Screenshot 2026-04-18 121900.png)
 > Fine-tuned **Llama-3.2-1B-Instruct** for structured, offline tool calling.  
 > Runs fully on CPU — no network required at inference time.
 
