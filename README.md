@@ -1,6 +1,5 @@
 
 # On-Device Tool-Calling Assistant
-![Streamlit Frontend preview](Screenshot 2026-04-18 121900.png)
 > Fine-tuned **Llama-3.2-1B-Instruct** for structured, offline tool calling.  
 > Runs fully on CPU — no network required at inference time.
 
@@ -13,7 +12,7 @@
 pip install -r requirements.txt
 streamlit run app.py
 ```
-
+![Streamlit Frontend preview](streamlit_frontend.png)
 The app runs in **🎮 Demo mode** (keyword-based responses) when no trained GGUF is present.  
 Once you complete training + quantization, the real model loads automatically.
 
